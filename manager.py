@@ -68,16 +68,18 @@ def reset_db():
     click.echo('Drop all tables.')
     db.create_all()
     click.echo('Reset all database.')
-    admin = User(
-        username='admin',
-        email='admin@admin.com',
-        is_admin=True,
-        active=True,
-    )
-    admin.set_password('admin')
-    db.session.add(admin)
-    db.session.commit()
-    click.echo('Success Add Admin Count.')
+
+    init_db()
+    # admin = User(
+    #     username='admin',
+    #     email='admin@admin.com',
+    #     is_admin=True,
+    #     active=True,
+    # )
+    # admin.set_password('admin')
+    # db.session.add(admin)
+    # db.session.commit()
+    # click.echo('Success Add Admin Count.')
 
 
 
