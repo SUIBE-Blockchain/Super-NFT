@@ -8,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -37,7 +36,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Unit test.html / coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -50,6 +49,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+.idea/
 
 # Translations
 *.mo
@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Database
+*.db
+./fisco_bcos_toolbox/test.db
+
+
+package-lock.json
+
+# JS
+node_modules

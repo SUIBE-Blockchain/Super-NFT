@@ -1,0 +1,9 @@
+import os
+
+LOCAL_WEID_URL = os.getenv("LOCAL_WEID_URL", "http://121.196.24.230:6001")
+SERVER_WEID_URL = os.getenv("SERVER_WEID_URL", "http://121.196.24.230:6001")
+
+Config = {
+    "LOCAL_WEID_URL": LOCAL_WEID_URL,
+    "SERVER_WEID_URL": SERVER_WEID_URL,
+}
