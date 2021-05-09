@@ -8,6 +8,7 @@ from flask_cors import CORS
 from super_nft.blueprints.public.public import public_bp
 from super_nft.blueprints.user.user import user_bp
 from super_nft.blueprints.admin.admin import admin_bp
+from super_nft.blueprints.syncer.syncer import syncer_bp
 
 from super_nft.extensions import (
     bcrypt,
@@ -57,6 +58,7 @@ def register_extensions(app):
 
 def configure_models():
     import super_nft.blueprints.public.models
+    import super_nft.blueprints.syncer.models
 
 def register_blueprints(app):
     """Register Flask blueprints."""
@@ -64,6 +66,7 @@ def register_blueprints(app):
     app.register_blueprint(public_bp)
     app.register_blueprint(user_bp, url_prefix='/user')
     app.register_blueprint(admin_bp, url_prefix='/admin')
+    app.register_blueprint(syncer_bp, url_prefix='/syncer')
 
 def register_errorhandlers(app):
     """Register error handlers."""
